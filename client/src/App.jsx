@@ -37,7 +37,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(()=>{
-    dispatch(checkAuth());
+    const token = JSON.parse(sessionStorage.getItem('token'))
+    dispatch(checkAuth(token));
   },[dispatch]);
 
   if(isLoading) return <Skeleton className="w-[600px] bg-black h-[600px] " />;
@@ -108,3 +109,4 @@ function App() {
 }
 
 export default App;
+
