@@ -73,9 +73,9 @@ const loginUser = async (req, res) => {
       { expiresIn: "60m" }
     );
 
-<<<<<<< HEAD
-    res.cookie("token", token, { httpOnly: true, secure: true }).json({
-=======
+
+   // res.cookie("token", token, { httpOnly: true, secure: true }).json({
+
     // res.cookie("token", token, { httpOnly: true, secure: true }).json({
     //   success: true,
     //   message: "Logged in successfully",
@@ -88,7 +88,6 @@ const loginUser = async (req, res) => {
     // });
 
     res.status(200).json({
->>>>>>> b6dc878 (update)
       success: true,
       message: 'Logged in successfully',
       token,
